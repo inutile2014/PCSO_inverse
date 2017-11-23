@@ -3,6 +3,7 @@ nmap -sU --open -p 161 -oG mega-snmp.txt RHOSTS
 
 #smb scan example
 nmap -p 139 -oG smb.txt 445 RHOSTS
+nmap --script smb-enum-shares.nse -p445 RHOSTS
 
 # nmap smb scan
 nmap --script smb-enum-shares.nse -p445 -oG 428opensmbcheck.txt RHOSTS
@@ -12,3 +13,33 @@ nmap -sn -oG pingsweeper.txt RHOSTS
 
 #nmap open port scan
 nmap -p 80 -oG openport80.txt RHOSTS
+
+Show the fingerprint of the host
+nmap -O 10.11.1.5
+
+Bannergrapping / Check for the 1000 most open ports
+nmap -sV -sT 10.11.1.5
+
+Scann a Subnet
+Scan a subnet nmap IP/Subnet
+
+Scan target from a Listfile
+nmap -iL list-of-ips.txt
+
+Scan 100 most common ports (Fast) 
+nmap -F 192.168.1.1   
+
+Scan all 65535 ports
+nmap -p- 192.168.1.1
+
+Scan using TCP connect 
+nmap -sT 192.168.1.1   
+
+Scan using TCP SYN scan (default) 
+nmap -sS 192.168.1.1  
+
+Scan UDP ports 
+nmap -sU -p 123,161,162 192.168.1.1
+
+Standard service detection 
+nmap -sV 192.168.1.1
