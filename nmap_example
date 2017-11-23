@@ -1,2 +1,4 @@
 #nmap udp scan
 nmap -sU --open -p 161 -oG mega-snmp.txt RHOSTS
+#smb scan example
+nmap -p 139 -oG smb.txt 445 RHOSTS
