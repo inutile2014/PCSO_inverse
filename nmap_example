@@ -1,0 +1,2 @@
+#nmap udp scan
+nmap -sU --open -p 161 -oG mega-snmp.txt RHOSTS
