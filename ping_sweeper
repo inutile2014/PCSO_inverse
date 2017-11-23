@@ -1,0 +1,20 @@
+#py example
+import subprocess 
+
+nrange = "10.11.1."
+
+for i in range(0, 60):
+        address = nrange + str(i)
+        res = subprocess.call(['ping', '-c', '3', address])
+        if res == 0:
+            print "ping to", address, "OK"
+        elif res == 2:
+            print "no response from", address
+        else:
+            print "ping to", address, "failed!"
+            
+            
+#bash example
+!/bin/bash
+for ip in $(seq 1 60); do ping -c 1 10.11.1.$ip>/dev/null; [ $? -eq 0 ] && echo "10.11.1.$ip UP" || : ; done
+
