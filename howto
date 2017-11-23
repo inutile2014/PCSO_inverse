@@ -1,0 +1,15 @@
+HexChat: /msg NickServ IDENTIFY <password>
+/join #offsec
+
+
+vpn: openvpn OS-SeeMail-PWK.ovpn 0xaOk9CebcJ (le cose piccole ogni tanto sono grandi)
+
+
+Windows Machin:
+	Connection: rdesktop -u NamevonMachin -p 0xaOk9CebcJ ExerciseMaschin
+	Credentials: 	Username: NamevonMachin
+			Password: 0xaOk9CebcJ
+			Windows 7 Lab IP: ExerciseMaschin
+
+Video: https://support.offensive-security.com/#!pwk-reporting.md
+Cours Mat: /root/Desktop/PWK_OSCP/pwk-SeeMail.pdf
