@@ -1,4 +1,14 @@
 #nmap udp scan
 nmap -sU --open -p 161 -oG mega-snmp.txt RHOSTS
+
 #smb scan example
 nmap -p 139 -oG smb.txt 445 RHOSTS
+
+# nmap smb scan
+nmap --script smb-enum-shares.nse -p445 -oG 428opensmbcheck.txt RHOSTS
+
+#nmap ping scann
+nmap -sn -oG pingsweeper.txt RHOSTS
+
+#nmap open port scan
+nmap -p 80 -oG openport80.txt RHOSTS
