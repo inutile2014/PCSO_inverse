@@ -1,3 +1,6 @@
+
+# nmap udp + tcp + os gathering
+nmap -sC -sU -sT RHOST
 #nmap udp scan
 nmap -sU --open -p 161 -oG mega-snmp.txt RHOSTS
 
