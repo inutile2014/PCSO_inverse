@@ -4,6 +4,7 @@ https://highon.coffee/blog/linux-local-enumeration-script/
 https://0x00sec.org/t/enumeration-for-linux-privilege-escalation/1959
 
 Windows:
+Edit files: edit myfile.txt
 https://github.com/pentestmonkey/windows-privesc-check
 http://www.fuzzysecurity.com/tutorials/16.html 
 http://www.sploitspren.com/2018-01-26-Windows-Privilege-Escalation-Guide/
